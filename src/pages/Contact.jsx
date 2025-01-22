@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Last from '../images/last.jpg'
 import Footer from '../components/Footer';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Contact = () => {
+   useEffect(()=>{
+            Aos.init({duration:2000});
+          },[])
   const [name, setname] = useState('')
   const [em, setem] = useState('')
   const [phone, setphone] = useState('')
@@ -33,7 +38,7 @@ const Contact = () => {
     {/* Contact Form */}
     <div className="w-full lg:w-auto">
       <form action="" onSubmit={SumbitHandler}>
-        <h1 className="text-3xl font-semibold text-center lg:text-left pl-0 lg:pl-14">
+        <h1 className="text-3xl font-semibold text-center lg:text-left pl-0 lg:pl-14" data-aos="fade-down-right">
           Contact Us
         </h1>
         <br />
@@ -89,24 +94,24 @@ const Contact = () => {
 
     {/* Address Section */}
     <div className="w-full lg:w-auto">
-      <h1 className="text-3xl font-semibold text-center lg:text-left">
+      <h1 className="text-3xl font-semibold text-center lg:text-left"data-aos="fade-down-right">
         Address
       </h1>
       <br />
-      <h2 className="text-2xl font-semibold text-center lg:text-left">
+      <h2 className="text-2xl font-semibold text-center lg:text-left"data-aos="zoom-in-down">
         DHA PHASE 2:
       </h2>
       <br />
-      <h2 className="text-center lg:text-left">
+      <h2 className="text-center lg:text-left"data-aos="zoom-in-down">
         Plot 38 C, Commercial Area A Phase 2
       </h2>
-      <h2 className="pt-4 text-center lg:text-left">
+      <h2 className="pt-4 text-center lg:text-left"data-aos="zoom-in-down">
         Defence Housing Authority, Karachi,
       </h2>
-      <h2 className="pt-4 text-center lg:text-left">Karachi City, Sindh</h2>
-      <h2 className="pt-4 text-center lg:text-left">Call: ‎‎+92 21 35312211,</h2>
-      <h2 className="pt-4 text-center lg:text-left">+92 21 35312222,</h2>
-      <h2 className="pt-4 text-center lg:text-left">+92 334 2874373</h2>
+      <h2 className="pt-4 text-center lg:text-left"data-aos="zoom-in-down">Karachi City, Sindh</h2>
+      <h2 className="pt-4 text-center lg:text-left"data-aos="zoom-in-down">Call: ‎‎+92 21 35312211,</h2>
+      <h2 className="pt-4 text-center lg:text-left"data-aos="zoom-in-down">+92 21 35312222,</h2>
+      <h2 className="pt-4 text-center lg:text-left"data-aos="zoom-in-down">+92 334 2874373</h2>
     </div>
   </div>
 </div>

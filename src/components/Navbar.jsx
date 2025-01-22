@@ -6,6 +6,7 @@ import nav from '../images/nav.png'
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -55,19 +56,19 @@ const Navbar = () => {
             <nav className="space-y-4">
               <NavLink 
                 to="/location" 
-                className="block bg-black rounded-2xl hover:bg-black pl-4 hover:text-orange-500 text-orange-500 text-2xl py-2"
+                className="block bg-black rounded-2xl  hover:bg-black pl-4 hover:text-orange-500 text-orange-500 text-2xl py-2"data-aos="fade-right"
               >
                 Location
               </NavLink>
               <NavLink 
                 to="/aboutus" 
-                className="block bg-black rounded-2xl  hover:bg-black pl-4 hover:text-orange-500 text-orange-500 text-2xl py-2"
+                className="block bg-black rounded-2xl  hover:bg-black pl-4 hover:text-orange-500 text-orange-500 text-2xl py-2"data-aos="fade-right"
               >
                 About Us
               </NavLink>
               <NavLink 
                 to="/contactus" 
-                className="block bg-black rounded-2xl  hover:bg-black pl-4  hover:text-orange-500 text-orange-500 text-2xl py-2"
+                className="block bg-black rounded-2xl  hover:bg-black pl-4  hover:text-orange-500 text-orange-500 text-2xl py-2"data-aos="fade-right"
               >
                 Contact Us
               </NavLink>

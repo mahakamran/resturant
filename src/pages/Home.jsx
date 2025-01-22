@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import img1 from '../images/1.webp';
 import img2 from '../images/2.webp';
 import img3 from '../images/3.webp';
@@ -20,13 +20,20 @@ import imgj from '../images/image.webp'
 import ice from '../images/ice.webp'
 import ice1 from '../images/ice1.webp'
 import Footer from '../components/Footer';
-
 import ice2 from '../images/ice2.webp'
 import ice3 from '../images/ice3.webp'
 import ice4 from '../images/ice4.webp'
 import Navbar from '../components/Navbar'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 const Home = () => {
+  useEffect(()=>{
+    Aos.init({duration:2000});
+  },[])
+
   return (
     <>
          <div className='bg-black'>
@@ -37,7 +44,7 @@ const Home = () => {
         
         {/* Burger Section - Non-Responsive */}
         <div className='w-full h-[680px]' id='burger'>
-          <img className='w-full h-[680px] mt-5 object-cover' src={imgj} alt="" />
+          <img className='w-full h-[680px] mt-5 object-cover'  data-aos="flip-right"  id='imf'src={imgj} alt="" />
         </div>
 
         {/* Deals Section */}
@@ -49,40 +56,49 @@ const Home = () => {
 
           {/* Product Cards - Responsive */}
           <div className='flex flex-wrap justify-evenly mt-3'>
-            <div  id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
+            <div  id='flex' data-aos = "fade-right" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
               <img src={img1} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3'>Simple Burger</h1>
-              <h2 className='text-3xl font-[none] text-center pt-3'>RS:1000</h2>
+              <h2 className='text-3xl font-[none] text-center pt-3' data-aos="flip-down">RS:1000</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#97bc9b] block'>
                 Buy now
               </button>
             </div>
-            <div id='flex'  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
+            <div id='flex'   data-aos = "fade-left" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
               <img src={img2} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3'>Zinger Burger</h1>
-              <h2 className='text-3xl font-[none] text-center pt-3'>RS:1100</h2>
+              <h2 className='text-3xl font-[none] text-center pt-3' data-aos="flip-down">RS:1100</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#97bc9b] block'>
                 Buy now
               </button>
             </div>
-            <div id='flex'  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
+            <div id='flex'   data-aos = "fade-right" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
               <img src={img3} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3'>Big Zinger</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3'>RS:900</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3' data-aos="flip-down">RS:900</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#97bc9b] block'>
                 Buy now
               </button>
             </div>
-            <div  id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
+            <div  id='flex'  data-aos = "fade-left"  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-white mb-5 mx-auto rounded-lg'>
               <img src={img4} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3'>Family Combo Zinger</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3'>RS:1200</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3' data-aos="flip-down">RS:1200</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#97bc9b] block'>
                 Buy now
               </button>
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
 
         {/* Zinger Burger Section */}
         <div className='w-full h-auto bg-pink-400 mt-2 rounded'>
@@ -93,34 +109,34 @@ const Home = () => {
 
           {/* Product Cards - Responsive */}
           <div className='flex flex-wrap justify-evenly mt-3 ' >
-            <div id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div id='flex' data-aos = "fade-right"  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={img6} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Simple Burger</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:1000</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white' data-aos="flip-down">RS:1000</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-pink-400 block'>
                 Buy now
               </button>
             </div>
-            <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div   id='flex'  data-aos = "fade-left" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={img8} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Zinger Burger</h1>
-              <h2 className='text-3xl font-[none] text-center pt-3 text-white'>RS:1100</h2>
+              <h2 className='text-3xl font-[none] text-center pt-3 text-white'  data-aos="flip-down">RS:1100</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-pink-400 block'>
                 Buy now
               </button>
             </div>
-            <div  id='flex'  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div  id='flex'  data-aos = "fade-right" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={img9} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Big Zinger</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:900</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'  data-aos="flip-down">RS:900</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-pink-400 block'>
                 Buy now
               </button>
             </div>
-            <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div   id='flex' data-aos = "fade-left" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={img10} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Family Combo Zinger</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:1200</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'  data-aos="flip-down">RS:1200</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-pink-400 block'>
                 Buy now
               </button>
@@ -136,34 +152,34 @@ const Home = () => {
 
           {/* Product Cards - Responsive */}
           <div className='flex flex-wrap justify-evenly mt-3 ' >
-            <div id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div id='flex'  data-aos="flip-right" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={a} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Simple Fries</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:1000</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'  data-aos="flip-down">RS:1000</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-yellow-300 block'>
                 Buy now
               </button>
             </div>
-            <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div   id='flex'  data-aos="flip-right" className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={e} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Spicy Fries</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:1100</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'  data-aos="flip-down">RS:1100</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-yellow-300 block'>
                 Buy now
               </button>
             </div>
-            <div  id='flex'  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div  id='flex'  data-aos="flip-right"  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={i} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Cheesey Fries</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:900</h2>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'  data-aos="flip-down">RS:900</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-yellow-300 block'>
                 Buy now
               </button>
             </div>
-            <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
+            <div   id='flex' data-aos="flip-right"  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
               <img src={oer} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Chicago Fries</h1>
-              <h2 className='text-3xl font-[none] text-center pt-3 text-white'>RS:1200</h2>
+              <h2 className='text-3xl font-[none] text-center pt-3 text-white ' data-aos="flip-down">RS:1200</h2>
               <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-yellow-300 block'>
                 Buy now
               </button>
@@ -185,17 +201,17 @@ const Home = () => {
       alt="Chicken Tenders" 
     />
     <div className='flex flex-col justify-center items-start lg:items-start px-4 lg:px-8 mt-6 lg:mt-0'>
-      <h1 className='font-semibold text-3xl sm:text-4xl lg:text-4xl pt-5 lg:pt-10 text-center lg:text-left'>
+      <h1 className='font-semibold text-3xl sm:text-4xl lg:text-4xl pt-5 lg:pt-10 text-center lg:text-left'data-aos="fade-up">
         Chicken Tenders
       </h1>
-      <h2 className='font-sans text-base sm:text-lg lg:text-xl pt-3 text-center lg:text-left'>
+      <h2 className='font-sans text-base sm:text-lg lg:text-xl pt-3 text-center lg:text-left'data-aos="fade-up">
         Three chicken tenders, each marinated in a unique flavor: <br />
         classic, spicy Nashville, and tangy Korean.
       </h2>
-      <h2 className='font-[none] text-2xl sm:text-3xl lg:text-4xl pt-5 lg:pt-9 text-center lg:text-left'>
+      <h2 className='font-[none] text-2xl sm:text-3xl lg:text-4xl pt-5 lg:pt-9 text-center lg:text-left'data-aos="fade-up">
         From Rs:900
       </h2>
-      <button className='px-8 sm:px-12 lg:px-20 py-3 sm:py-4 lg:py-4 rounded border-2 border-black bg-orange-300  mt-4 w-full lg:w-auto'>
+      <button className='px-8 sm:px-12 lg:px-20 py-3 sm:py-4 lg:py-4 rounded border-2 border-black bg-orange-300  mt-4 w-full lg:w-auto' data-aos="flip-up">
         Buy more
       </button>
     </div>
@@ -211,34 +227,34 @@ const Home = () => {
           {/* Product Cards - Responsive */}
           <div className='flex flex-wrap justify-evenly mt-3 ' >
             <div id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
-              <img src={ice1} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
+              <img src={ice1}  data-aos="zoom-in-up"   className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Butter Shake</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:800</h2>
-              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block'>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white' data-aos="zoom-out">RS:800</h2>
+              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block' data-aos="zoom-out">
                 Buy now
               </button>
             </div>
             <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
-              <img src={ice2} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
+              <img src={ice2} data-aos="zoom-in-up"   className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Icecream Shake</h1>
-              <h2 className='text-3xl font-[none] text-center pt-3 text-white'>RS:400</h2>
-              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block'>
+              <h2 className='text-3xl font-[none] text-center pt-3 text-white' data-aos="zoom-out">RS:400</h2>
+              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block' data-aos="zoom-out">
                 Buy now
               </button>
             </div>
             <div  id='flex'  className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
-              <img src={ice3} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
+              <img src={ice3}  data-aos="zoom-in-up"  className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Oreo Shake</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:500</h2>
-              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block'>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white' data-aos="zoom-out">RS:500</h2>
+              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block' data-aos="zoom-out">
                 Buy now
               </button>
             </div>
             <div   id='flex' className='w-full sm:w-[350px] md:w-[300px] lg:w-[350px] h-[500px] bg-black mb-5 mx-auto rounded-lg'>
-              <img src={ice4} className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
+              <img src={ice4}  data-aos="zoom-in-up"  className='h-[320px] w-[320px] rounded mt-2 object-cover mx-auto bg-white' alt="" />
               <h1 className='text-3xl font-semibold text-center pt-3 text-white'>Choco Shake</h1>
-              <h2 className='text-3xl font-[none]  text-center pt-3 text-white'>RS:1000</h2>
-              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block'>
+              <h2 className='text-3xl font-[none]  text-center pt-3 text-white' data-aos="zoom-out">RS:1000</h2>
+              <button className='px-8 py-3 sm:px-10 sm:py-3 rounded-lg mx-auto mt-5 bg-[#f54526] block' data-aos="zoom-out">
                 Buy now
               </button>
             </div>
