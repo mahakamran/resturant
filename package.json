@@ -1,15 +1,19 @@
 {
   "name": "web",
+  "homepage": "https://mahakamran.github.io/resturant",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
+    "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
