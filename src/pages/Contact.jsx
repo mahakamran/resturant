@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
-import Last from '../images/Last.jpg'
+import Last from '../images/last.jpg'
 import Footer from '../components/Footer';
 
 
